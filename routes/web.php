@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 //start Admin
 Auth::routes();
-Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'index'])->name('promotepage.home');
+// Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'index'])->name('promotepage.home');
 //End Admin
 
 // start promotepage //

@@ -265,5 +265,3 @@
 <!-- Tournaments section bg -->
 
 @stop
-message.txt
-10 KB
