@@ -4,7 +4,7 @@
 <form class="login100-form validate-form p-b-33 p-t-5" method="POST" action="{{ route('register') }}">
     @csrf
     <div class="wrap-input100 validate-input" data-validate="Enter Name">
-        <input class="input100" type="text" name="Name" placeholder="Name">
+        <input class="input100" type="text" name="name" placeholder="name">
         <span class="focus-input100" data-placeholder="&#xe82a;"></span>
     </div>
 
