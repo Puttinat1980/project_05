@@ -1,5 +1,5 @@
 	<!-- Favicon -->   
-<link href="{{asset('template/promote/img/icon.ico')}}" rel="shortcut icon"/>
+<link href="{{asset('template/promote/images/icon.ico')}}" rel="shortcut icon"/>
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">

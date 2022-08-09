@@ -3,7 +3,7 @@
 		<div class="container">
 			<!-- logo -->
 			<a class="site-golo" href="index.php">
-				<img src="img/golo.png" alt="">
+				<img src="{{ asset('images/golo.png') }}"alt="">
 			</a>
 			<div class="user-panel">
 				<a href="#">Login</a>  /  <a href="#">Register</a>

@@ -3,7 +3,7 @@
 <!-- Hero section -->
 <section class="hero-section">
 	<div class="hero-slider owl-carousel">
-		<div class="hs-item set-bg" style="background-image: url('/images/bcakg.jpg')">
+		<div class="hs-item set-bg"  data-setbg="{{ asset('images/bcakg.jpg') }}">
 			<div class="hs-text">
 				<div class="container">
 					<h2><span>อภิสรา</span>การพิมพ์ </h2>
@@ -14,7 +14,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="hs-item set-bg" data-setbg="img/bcakg.jpg">
+		<div class="hs-item set-bg" data-setbg="{{ asset('images/bcakg.jpg') }}">
 			<div class="hs-text">
 				<div class="container">
 					<h2><span>อภิสรา</span>การพิมพ์ </h2>
@@ -53,7 +53,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-3 col-md-6 p-0">
-				<div class="feature-item set-bg" style="background-image: url('/images/paperbook.jpg')">
+				<div class="feature-item set-bg"data-setbg="{{ asset('images/paperbook.jpg') }}">
 					<span class="cata new">กระดาษหนังสือ</span>
 					<div class="fi-content text-white">
 						<h5><a href="#"></a></h5>
@@ -63,7 +63,7 @@
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6 p-0">
-				<div class="feature-item set-bg" style="background-image: url('/images/milkcarton.jpg') ">
+				<div class="feature-item set-bg" data-setbg="{{ asset('images/milkcarton.jpg') }}">
 					<span class="cata strategy">กล่องนม</span>
 					<div class="fi-content text-white">
 						<h5><a href="#"></a></h5>
@@ -73,7 +73,7 @@
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6 p-0">
-				<div class="feature-item set-bg" style="background-image: url('/images/poster.jpg') ">
+				<div class="feature-item set-bg" data-setbg="{{ asset('images/poster.jpg') }}">
 					<span class="cata new">โปสเตอร์</span>
 					<div class="fi-content text-white">
 						<h5><a href="#"></a></h5>
@@ -83,7 +83,7 @@
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6 p-0">
-				<div class="feature-item set-bg" style="background-image: url('/images//sticker.jpg')">
+				<div class="feature-item set-bg"  data-setbg="{{ asset('images/sticker.jpg') }}">
 					<span class="cata racing">สติ๊กเกอร์</span>
 					<div class="fi-content text-white">
 						<h5><a href="#"></a></h5>
@@ -100,7 +100,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-3 ">
-			<div class="feature-item set-bg" style="background-image: url('/images/brochure.jpg')">
+			<div class="feature-item set-bg" data-setbg="{{ asset('images/brochure.jpg') }}">
 				<span class="cata new">เบอร์ชัวร์</span>
 				<div class="fi-content text-white">
 					<h5><a href="#"></a></h5>
@@ -123,7 +123,7 @@
 		<div class="row">
 			<div class="col-md-6">
 				<div class="review-item">
-					<div class="review-cover set-bg" style="background-image: url('/images/paperbook.jpg')">
+					<div class="review-cover set-bg"data-setbg="{{ asset('images/paperbook.jpg')}}">
 
 					</div>
 					<div class="review-text">
@@ -134,7 +134,7 @@
 			</div>
 			<div class="col-md-6">
 				<div class="review-item">
-					<div class="review-cover set-bg" style="background-image: url('/images/poster.jpg') ">
+					<div class="review-cover set-bg" data-setbg="{{ asset('images/milkcarton.jpg')}}">
 					</div>
 					<div class="review-text">
 						<h4>โปสเตอร์</h4>
@@ -144,7 +144,7 @@
 			</div>
 			<div class="col-md-6">
 				<div class="review-item">
-					<div class="review-cover set-bg" style="background-image: url('/images/milkcarton.jpg') ">
+					<div class="review-cover set-bg" data-setbg="{{ asset('images/sticker.jpg')}}">
 					</div>
 					<div class="review-text">
 						<h4>กล่องนม</h4>
@@ -154,7 +154,7 @@
 			</div>
 			<div class="col-md-6">
 				<div class="review-item">
-					<div class="review-cover set-bg" style="background-image: url('/images//sticker.jpg')">
+					<div class="review-cover set-bg"data-setbg="{{ asset('images/paperbook.jpg')}}">
 					</div>
 					<div class="review-text">
 						<h4>สติ๊กเกอร์</h4>
@@ -164,7 +164,7 @@
 			</div>
 			<div class="col-md-6">
 				<div class="review-item">
-					<div class="review-cover set-bg" style="background-image: url('/images/brochure.jpg')">
+					<div class="review-cover set-bg" data-setbg="{{ asset('images/brochure.jpg')}}">
 					</div>
 					<div class="review-text">
 						<h4>เบอร์ชัวร์</h4>
@@ -185,7 +185,7 @@
 		<div class="row">
 			<div class="col-lg-4 col-md-6">
 				<div class="recent-game-item">
-					<div class="rgi-thumb set-bg" style="background-image: url('/images/mem4.jpg')">
+					<div class="rgi-thumb set-bg" data-setbg="{{ asset('images/mem4.jpg') }}">
 						<div class="cata new">best</div>
 					</div>
 					<div class="rgi-content">
@@ -201,7 +201,7 @@
 			</div>
 			<div class="col-lg-4 col-md-6">
 				<div class="recent-game-item">
-					<div class="rgi-thumb set-bg" style="background-image: url('/images/mem4.jpg')">
+					<div class="rgi-thumb set-bg"data-setbg="{{ asset('images/mem4.jpg') }}">
 						<div class="cata new">best</div>
 					</div>
 					<div class="rgi-content">
@@ -217,7 +217,7 @@
 			</div>
 			<div class="col-lg-4 col-md-6">
 				<div class="recent-game-item">
-					<div class="rgi-thumb set-bg" style="background-image: url('/images/mem4.jpg')">
+					<div class="rgi-thumb set-bg" data-setbg="{{ asset('images/mem4.jpg') }}">
 						<div class="cata new">best</div>
 					</div>
 					<div class="rgi-content">
@@ -246,7 +246,7 @@
 				<div class="tournament-item mb-6 mb-lg-6">
 					<div class="ti-notic">เครื่องพิมพ์เครื่องแรกในโลก</div>
 					<div class="ti-content">
-						<div class="ti-thumb set-bg" style="background-image: url('/images/prit.png')"></div>
+						<div class="ti-thumb set-bg"  data-setbg="{{ asset('images/prit.png') }}"></div>
 						<div class="ti-text">
 							<h4>Koenig 1814</h4>
 							<ul>
