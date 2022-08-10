@@ -20,12 +20,6 @@
 
 
 
-   <footer class="row">
-       @include('includes.admin.footer')
-   </footer>
-
-
-
 
 
 

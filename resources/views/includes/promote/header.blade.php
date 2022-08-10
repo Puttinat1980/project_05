@@ -6,7 +6,21 @@
 				<img src="{{ asset('images/golo.png') }}"alt="">
 			</a>
 			<div class="user-panel">
-				<a href="#">Login</a>  /  <a href="#">Register</a>
+			@if (Route::has('login'))
+                    @auth
+                        <li><a href="{{ url('/admin/home') }}" >Admin</a></li>
+          @else
+
+                      <a href="{{ route('login') }}" >Login</a>/
+
+              @if (Route::has('register'))
+
+                       <a href="{{ route('register') }}" >Register</a>
+
+              @endif
+
+                    @endauth
+            @endif
 			</div>
 			<!-- responsive -->
 			<div class="nav-switch">

@@ -24,7 +24,7 @@
                     <a href="workings.php" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Workings</a>
                     <a href="history.php" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>History</a>
                     <a href="process.php" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Process</a>
-                    </div>
+                    
                 </div>
             </nav>
         </div>
