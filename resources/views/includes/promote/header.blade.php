@@ -29,12 +29,12 @@
 			<!-- site menu -->
 			<nav class="main-menu">
 				<ul>
-					<li><a href="{{ url('/')}}">หน้าแรก</a></li>
-					<li><a href="{{ url('/product')}}">คลังสินค้า</a></li>
-					<li><a href="work.php">ผลงาน</a></li>
-					<li><a href="calendar.php">ปฏิทิน</a></li>
-					<li><a href="about.php">เกี่ยวกับ</a></li>
-					<li><a href="contact.php">ที่อยู่-ติดต่อ</a></li>
+				<li><a href="{{ url('/')}}">หน้าแรก</a></li>
+<li><a href="{{ url('/product')}}">คลังสินค้า</a></li>
+<li><a href="{{ url('/work')}}">ผลงาน</a></li>
+<li><a href="{{ url('/calendar')}}">ปฏิทิน</a></li>
+<li><a href="{{ url('/about')}}">เกี่ยวกับ</a></li>
+<li><a href="{{ url('/contact')}}">ที่อยู่-ติดต่อ</a></li>
 				</ul>
 			</nav>
 		</div>

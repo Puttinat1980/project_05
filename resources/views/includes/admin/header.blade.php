@@ -15,15 +15,15 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.php" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="{{ url('/admin/home')}}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
-                        <a href="calender.php" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>Calender</a>
+                        <a href="{{ url('/admin/calender')}}" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>Calender</a>
                     </div>
-                    <a href="employee.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Employee</a>
-                    <a href="type.php" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Type</a>
-                    <a href="workings.php" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Workings</a>
-                    <a href="history.php" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>History</a>
-                    <a href="process.php" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Process</a>
+                    <a href="{{ url('/admin/employee')}}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Employee</a>
+                    <a href="{{ url('/admin/type')}}" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Type</a>
+                    <a href="{{ url('/admin/workings')}}" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Workings</a>
+                    <a href="{{ url('/admin/history')}}" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>History</a>
+                    <a href="{{ url('/admin/process')}}" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Process</a>
                     
                 </div>
             </nav>
