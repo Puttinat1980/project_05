@@ -97,7 +97,7 @@
                     <div class="col-12">
                         <div class="bg-secondary rounded h-100 p-4">
                             <h6 class="mb-4">Employee</h6>
-                            <a href="employeeaddform.php"  class="btn btn-info m-2">เพิ่มข้อมูล</a>
+                            <a href="{{url('/admin/employee/add')}}"  class="btn btn-info m-2">เพิ่มข้อมูล</a>
 
                             <div class="table-responsive">
                                 <table class="table">
@@ -123,8 +123,8 @@
                                             <td>USA</td>
                                             <td>123</td>
                                             <td>Member</td>
-                                            <td> <a href="employeeeditform.php"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
-                                            <td> <a href="employeedelete.php"  class="btn btn-danger m-2">ลบ</a> </td>
+                                            <td> <a href="{{url('/admin/employee/edit')}}"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
+                                            <td> <button class="btn btn-danger m-2">ลบ</button></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">2</th>
@@ -134,8 +134,8 @@
                                             <td>UK</td>
                                             <td>456</td>
                                             <td>Member</td>
-                                            <td> <a href="employeeeditform.php"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
-                                            <td> <a href="employeedelete.php"  class="btn btn-danger m-2">ลบ</a> </td>
+                                            <td> <a href="{{url('/admin/employee/edit')}}"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
+                                            <td> <button class="btn btn-danger m-2">ลบ</button> </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">3</th>
@@ -145,8 +145,8 @@
                                             <td>AU</td>
                                             <td>789</td>
                                             <td>Member</td>
-                                            <td> <a href="employeeeditform.php"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
-                                            <td> <a href="employeedelete.php"  class="btn btn-danger m-2">ลบ</a> </td>
+                                            <td> <a href="{{url('/admin/employee/edit')}}"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
+                                            <td> <button class="btn btn-danger m-2">ลบ</button></td>
                                         </tr>
                                     </tbody>
                                 </table>

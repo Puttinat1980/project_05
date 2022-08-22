@@ -97,7 +97,7 @@
                     <div class="col-12">
                         <div class="bg-secondary rounded h-100 p-4">
                             <h6 class="mb-4">Calender</h6>
-                        <a href="calenderaddform.php"  class="btn btn-info m-2">เพิ่มข้อมูล</a>
+                        <a href="{{url('/admin/calender/add')}}"  class="btn btn-info m-2">เพิ่มข้อมูล</a>
                             
 
 
@@ -125,8 +125,8 @@
                                             <td>USA</td>
                                             <td>123</td>
                                             <td>Member</td>
-                                            <td> <a href="calendereditform.php"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
-                                            <td> <a href="calenderdelete.php"  class="btn btn-danger m-2">ลบ</a> </td>
+                                            <td> <a href="{{url('/admin/calender/edit')}}"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
+                                            <td> <button class="btn btn-danger m-2" type="delete">ลบ</button></td>
                                             
                                         </tr>
                                         <tr>
@@ -137,8 +137,8 @@
                                             <td>UK</td>
                                             <td>456</td>
                                             <td>Member</td>
-                                            <td> <a href="calendereditform.php"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
-                                            <td> <a href="calenderdelete.php"  class="btn btn-danger m-2">ลบ</a> </td>
+                                            <td> <a href="{{url('/admin/calender/edit')}}"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
+                                            <td> <button class="btn btn-danger m-2" type="delete">ลบ</button></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">3</th>
@@ -148,8 +148,8 @@
                                             <td>AU</td>
                                             <td>789</td>
                                             <td>Member</td>
-                                            <td> <a href="calendereditform.php"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
-                                            <td> <a href="calenderdelete.php"  class="btn btn-danger m-2">ลบ</a> </td>
+                                            <td> <a href="{{url('/admin/calender/edit')}}"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
+                                            <td> <button class="btn btn-danger m-2" type="delete">ลบ</button></td>
                                         </tr>
                                         
                                     </tbody>
