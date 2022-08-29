@@ -114,39 +114,19 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>John</td>
-                                            <td>Doe</td>
-                                            <td>jhon@email.com</td>
-                                            <td>USA</td>
-                                            <td>123</td>
-                                            <td>Member</td>
-                                            <td> <a href="{{url('admin/process/edit')}}"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
-                                            <td> <button class="btn btn-danger m-2">ลบ</button> </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>mark@email.com</td>
-                                            <td>UK</td>
-                                            <td>456</td>
-                                            <td>Member</td>
-                                            <td> <a href="{{url('admin/process/edit')}}"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
-                                            <td> <button class="btn btn-danger m-2">ลบ</button> </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>jacob@email.com</td>
-                                            <td>AU</td>
-                                            <td>789</td>
-                                            <td>Member</td>
-                                            <td> <a href="{{url('admin/process/edit')}}"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
-                                            <td> <button class="btn btn-danger m-2">ลบ</button> </td>
-                                        </tr>
+                                        @foreach($read as $row)
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>{{ $row->name }}</td>
+                                                <td>Doe</td>
+                                                <td>jhon@email.com</td>
+                                                <td>USA</td>
+                                                <td>123</td>
+                                                <td>Member</td>
+                                                <td> <a href="{{url('/admin/employee/edit')}}"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
+                                                <td> <button class="btn btn-danger m-2">ลบ</button></td>
+                                            </tr>
+                                          @endforeach
                                     </tbody>
                                 </table>
                             </div>

@@ -1,6 +1,10 @@
 @extends('layouts.admin.master')
 
 @section('text')
+<title>Register</title>
+<span class="login100-form-title p-b-41">
+    Account Register
+</span>
 <form class="login100-form validate-form p-b-33 p-t-5" method="POST" action="{{ route('register') }}">
     @csrf
     <div class="wrap-input100 validate-input" data-validate="Enter Name">
