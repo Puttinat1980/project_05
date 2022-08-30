@@ -27,11 +27,11 @@
 			<div class="row">
 				<div class="col-lg-4 mb-5 mb-lg-0">
 					<h4 class="comment-title">Contact us</h4>
-					<p>Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl. Duis feug iat bibendum orci, non elementum urna. Cras sit amet sapien aliquam.</p>
+					<p></p>
 					<div class="row">
 						<div class="col-md-9">
 							<ul class="contact-info-list">
-								<li><div class="cf-left">Address</div><div class="cf-right">1481 Creekside Lane Avila Beach, CA 931</div></li>
+								<li><div class="cf-left">Address</div><div class="cf-right">63/225,63/226-227,63/205 Sao Thong Hin,Bang Yai District,Nonthaburi 11140</div></li>
 								<li><div class="cf-left">Phone</div><div class="cf-right">02 903 0613</div></li>
 								<li><div class="cf-left">E-mail</div><div class="cf-right">apisaragroup@gmail.com</div></li>
 								<li><div class="cf-left">LINE</div><div class="cf-right">Apisara</div></li>

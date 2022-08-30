@@ -1,13 +1,16 @@
 @extends('layouts.promote')
 @section('content')
+
 <!-- Latest news section -->
 <div class="latest-news-section">
-		<div class="ln-title">Latest News</div>
-		<div class="news-ticker">
-			<div class="news-ticker-contant">
-				<div class="nt-item"><span class="new">new</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
-				<div class="nt-item"><span class="strategy">strategy</span>Isum dolor sit amet, consectetur adipiscing elit. </div>
-				<div class="nt-item"><span class="racing">racing</span>Isum dolor sit amet, consectetur adipiscing elit. </div>
+<div class="ln-title">ประเภทสินค้า</div>
+	<div class="news-ticker">
+		<div class="news-ticker-contant">
+			<div class="nt-item"><span class="new">กระดาษหนังสือ</span> </div>
+			<div class="nt-item"><span class="new">โปสเตอร์</span></div>
+			<div class="nt-item"><span class="new">เบอร์ชัวร์</span> </div>
+			<div class="nt-item"><span class="strategy">กล่องนม</span> </div>
+			<div class="nt-item"><span class="racing">สติ๊กเกอร์</span> </div>
 			</div>
 		</div>
 	</div>
@@ -20,7 +23,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-5 col-lg-6 text-white">
-						<h1>คลังสินค้า</h1>
+						<h1>คลังสินค้า </h1>
 					</div>
 				</div>
 			</div>

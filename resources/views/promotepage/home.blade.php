@@ -134,7 +134,7 @@
 			</div>
 			<div class="col-md-6">
 				<div class="review-item">
-					<div class="review-cover set-bg" data-setbg="{{ asset('images/milkcarton.jpg')}}">
+					<div class="review-cover set-bg" data-setbg="{{ asset('images/poster.jpg')}}">
 					</div>
 					<div class="review-text">
 						<h4>โปสเตอร์</h4>
@@ -144,7 +144,7 @@
 			</div>
 			<div class="col-md-6">
 				<div class="review-item">
-					<div class="review-cover set-bg" data-setbg="{{ asset('images/sticker.jpg')}}">
+					<div class="review-cover set-bg" data-setbg="{{ asset('images/milkcarton.jpg')}}">
 					</div>
 					<div class="review-text">
 						<h4>กล่องนม</h4>
@@ -154,7 +154,7 @@
 			</div>
 			<div class="col-md-6">
 				<div class="review-item">
-					<div class="review-cover set-bg"data-setbg="{{ asset('images/paperbook.jpg')}}">
+					<div class="review-cover set-bg"data-setbg="{{ asset('images/sticker.jpg')}}">
 					</div>
 					<div class="review-text">
 						<h4>สติ๊กเกอร์</h4>
@@ -185,7 +185,7 @@
 		<div class="row">
 			<div class="col-lg-4 col-md-6">
 				<div class="recent-game-item">
-					<div class="rgi-thumb set-bg" data-setbg="{{ asset('images/mem4.jpg') }}">
+					<div class="rgi-thumb set-bg" data-setbg="{{ asset('images/mem.jpg') }}">
 						<div class="cata new">best</div>
 					</div>
 					<div class="rgi-content">
@@ -201,7 +201,7 @@
 			</div>
 			<div class="col-lg-4 col-md-6">
 				<div class="recent-game-item">
-					<div class="rgi-thumb set-bg"data-setbg="{{ asset('images/mem4.jpg') }}">
+					<div class="rgi-thumb set-bg"data-setbg="{{ asset('images/mem.jpg') }}">
 						<div class="cata new">best</div>
 					</div>
 					<div class="rgi-content">
@@ -217,7 +217,7 @@
 			</div>
 			<div class="col-lg-4 col-md-6">
 				<div class="recent-game-item">
-					<div class="rgi-thumb set-bg" data-setbg="{{ asset('images/mem4.jpg') }}">
+					<div class="rgi-thumb set-bg" data-setbg="{{ asset('images/mem.jpg') }}">
 						<div class="cata new">best</div>
 					</div>
 					<div class="rgi-content">
