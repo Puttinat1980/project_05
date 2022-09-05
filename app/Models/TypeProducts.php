@@ -10,8 +10,8 @@ class TypeProducts extends Model
 {
     use HasFactory,SoftDeletes;
 
-    protected $table = 'type_products';
+    protected $table = 'type_product';
     protected $fillable = [
-            'name',
+            'name','price','detail','image'
     ];
 }

@@ -115,10 +115,10 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-
+                                            @foreach($read as $row)
                                             <tr>
                                                 <th scope="row">1</th>
-                                                <td></td>
+                                                <td>{{ $row->name }}</td>
                                                 <td>Doe</td>
                                                 <td>jhon@email.com</td>
                                                 <td>USA</td>
@@ -127,7 +127,7 @@
                                                 <td> <a href="{{url('/admin/employee/edit')}}"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
                                                 <td> <button class="btn btn-danger m-2">ลบ</button></td>
                                             </tr>
-
+                                          @endforeach
                                         
                                     </tbody>
                                 </table>

@@ -103,30 +103,24 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
-                                            <th scope="col">First Name</th>
-                                            <th scope="col">Last Name</th>
-                                            <th scope="col">Email</th>
-                                            <th scope="col">Country</th>
-                                            <th scope="col">ZIP</th>
-                                            <th scope="col">Status</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">price</th>
+                                            <th scope="col">detail</th>
                                             <th scope="col">แก้ไข</th>
                                             <th scope="col">ลบ</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-
+                                            @foreach ($type as $row)
                                             <tr>
-                                                <th scope="row">1</th>
-                                                <td></td>
-                                                <td>Doe</td>
-                                                <td>jhon@email.com</td>
-                                                <td>USA</td>
-                                                <td>123</td>
-                                                <td>Member</td>
+                                                <td>{{$row->id}}</td>
+                                                <td>{{$row->name}}</td>
+                                                <td>{{$row->price}}</td>
+                                                <td>{{$row->detail}}</td>
                                                 <td> <a href="{{url('/admin/employee/edit')}}"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
                                                 <td> <button class="btn btn-danger m-2">ลบ</button></td>
                                             </tr>
-
+                                            @endforeach
                                     </tbody>
                                 </table>
                             </div>

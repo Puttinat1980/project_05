@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\TypeProducts;
+
+use function PHPSTORM_META\type;
 
 class TypeController extends Controller
 {
@@ -24,6 +27,26 @@ class TypeController extends Controller
     public function index()
     {
         // return view('home');
-        return view('adminpage.type.admintype');
+        $type = TypeProducts::all();
+        return view('adminpage.type.admintype',compact('type'));
     }
+    public function formadd()
+    {
+        return view('adminpage.type.add');
+    }
+
+public function add(Request $request)
+{
+    $request->validate([
+        //'picture'=>'null',
+        'name'=>"nullable",
+        'price'=>'nullable',
+        //'typeproduct'=>'null',
+        'detail'=>'nullable',
+
+    ]);
+    TypeProducts::create($request->all());
+
+    return redirect()->route('adminpage.type.admintype');
+}
 }
