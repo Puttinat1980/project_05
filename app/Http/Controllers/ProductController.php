@@ -1,13 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-use App\Models\TypeProducts;
+use App\Models\Product;
+Use Alert;
 
-use function PHPSTORM_META\type;
 
-class TypeController extends Controller
+use function PHPSTORM_META\Product;
+
+class productController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -27,26 +28,26 @@ class TypeController extends Controller
     public function index()
     {
         // return view('home');
-        $type = TypeProducts::all();
-        return view('adminpage.type.admintype',compact('type'));
+        $product = product::all();
+        return view('adminpage.product.adminproduct',compact('product'));
     }
     public function formadd()
     {
-        return view('adminpage.type.add');
+        return view('adminpage.product.add');
     }
 
-public function add(Request $request)
+public function insert(Request $request)
 {
     $request->validate([
-        //'picture'=>'null',
         'name'=>"nullable",
         'price'=>'nullable',
-        //'typeproduct'=>'null',
         'detail'=>'nullable',
+        'image'=>'nullable',
+
 
     ]);
-    TypeProducts::create($request->all());
+    product::create($request->all());
 
-    return redirect()->route('adminpage.type.admintype');
+    return redirect()->route('adminpage.product.adminproduct');
 }
 }

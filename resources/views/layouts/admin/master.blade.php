@@ -27,7 +27,7 @@
 <!--===============================================================================================-->
 </head>
 <body>
-	
+	@include('sweetalert::alert')
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('admin/images/bg-01.jpg');">
 			<div class="wrap-login100 p-t-30 p-b-50">

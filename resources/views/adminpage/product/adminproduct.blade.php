@@ -11,6 +11,9 @@
                 <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars"></i>
                 </a>
+                <form class="d-none d-md-flex ms-4">
+                    <input class="form-control bg-dark border-0" type="search" placeholder="Search">
+                </form>
                 <div class="navbar-nav align-items-center ms-auto">
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
@@ -92,31 +95,39 @@
             <!-- Table Start -->
             <div class="container-fluid pt-4 px-4">
                     <div class="col-12">
-                    <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">เพิ่มข้อมูล</h6>
-                            <form action="{{ route('adminpage.type.add')}}" method="POST">
-                                @csrf
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">ชื่อ</label>
-                                    <input type="text" name = "name"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">ราคา</label>
-                                    <input type="text" name = "price"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">ข้อมูล</label>
-                                    <input type="text" name = "detail"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">                                    </div>
-                                </div>
-
-
-                                {{-- <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">รูปภาพ</label>
-                                    <input class="form-control bg-dark" type="file" id="formFile">
-                                </div> --}}
-                                <a href="{{url('admin/type')}}"  class="btn btn-light m-2">ย้อนกลับ</a>
-                                <button type="submit" class="btn btn-primary">เพิ่มข้อมูล</button>
-                            </form>
+                        <div class="bg-secondary rounded h-100 p-4">
+                            <h6 class="mb-4">product</h6>
+                            <a href="{{url('admin/product/add')}}"  class="btn btn-info m-2">เพิ่มข้อมูล</a>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">name</th>
+                                            <th scope="col">image</th>
+                                            <th scope="col">price</th>
+                                            <th scope="col">detail</th>
+                                            <th scope="col">แก้ไข</th>
+                                            <th scope="col">ลบ</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            @foreach ($product as $pd)
+                                            <tr>
+                                                <td>{{$pd->id}}</td>
+                                                <td>{{$pd->name}}</td>
+                                                <td class="text-bold-500">
+                                                    <img src="{{ asset('admin/upload/calendar/'. $pd->image) }}" width="100px" height="100px">
+                                                </td>
+                                                <td>{{$pd->price}}</td>
+                                                <td>{{$pd->detail}}</td>
+                                                <td> <a href="{{url('/admin/calendar/edit/'. $pd->id)}}" class="btn btn-warning rounded-pill">แก้ไข</a> </td>                                                {{-- <td> <a href="{{url('/admin/hbproduct/delete/'. $hb->id)}}"  class="btn btn-danger rounded-pill">Delete</a> </td> --}}
+                                                <td> <a href="{{url('/admin/calendar/delete/'. $pd->id)}}"  class="btn btn-danger rounded-pill">ลบ</a> </td>
+                                            </tr>
+                                            @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -146,5 +157,4 @@
 </body>
 
 </html>
-
 @stop

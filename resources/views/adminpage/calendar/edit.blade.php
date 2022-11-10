@@ -97,18 +97,27 @@
                     <div class="col-12">
                     <div class="bg-secondary rounded h-100 p-4">
                             <h6 class="mb-4">แก้ไขข้อมูล</h6>
-                            <form>
+                            <form action="{{ url('/admin/calendar/update/'.$calendar->id) }}" method="POST" enctype="multipart/form-data">
+                                @csrf
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">ชื่อ</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    <div id="emailHelp" class="form-text">ใส่ชื่อ calender
+                                    <input type="text" class="form-control" name="name" value="{{ $calendar->name }}">
+                                    <div id="emailHelp" class="form-text">ใส่ชื่อ calendar
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">รายละเอียด</label>
+                                    <input type="text" class="form-control" name="detail" value="{{ $calendar->detail }}">
+                                    <div id="emailHelp" class="form-text">ใส่ชื่อ calendar
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">รูปภาพ</label>
-                                    <input class="form-control bg-dark" type="file" id="formFile">
+                                    <input type="file" class="form-control" name="image" value="{{ $calendar->image }}">
+                                    <img src="{{ asset('admin/upload/calendar/'. $calendar->image) }}" width="100px" height="100px">
                                 </div>
-                                <a href="{{url('/admin/calender')}}"  class="btn btn-light m-2">ย้อนกลับ</a>
+
+                                <a href="{{url('/admin/calendar')}}"  class="btn btn-light m-2">ย้อนกลับ</a>
                                 <button type="submit" class="btn btn-primary">เพิ่มข้อมูล</button>
                             </form>
                         </div>

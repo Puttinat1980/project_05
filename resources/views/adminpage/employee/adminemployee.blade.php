@@ -86,7 +86,13 @@
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">My Profile</a>
                             <a href="#" class="dropdown-item">Settings</a>
-                            <a href="#" class="dropdown-item">Log Out</a>
+                            <a href="#" class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"
+                            >Log Out</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
                         </div>
                     </div>
                 </div>
@@ -98,7 +104,6 @@
                         <div class="bg-secondary rounded h-100 p-4">
                             <h6 class="mb-4">Employee</h6>
                             <a href="{{url('/admin/employee/add')}}"  class="btn btn-info m-2">เพิ่มข้อมูล</a>
-
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -107,25 +112,23 @@
                                             <th scope="col">First Name</th>
                                             <th scope="col">Last Name</th>
                                             <th scope="col">Email</th>
-                                            <th scope="col">Country</th>
-                                            <th scope="col">ZIP</th>
-                                            <th scope="col">Status</th>
+                                            <th scope="col">phone</th>
+                                            <th scope="col">address</th>
                                             <th scope="col">แก้ไข</th>
                                             <th scope="col">ลบ</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                            @foreach($read as $row)
+                                            @foreach($employee as $ep)
                                             <tr>
-                                                <th scope="row">1</th>
-                                                <td>{{ $row->name }}</td>
-                                                <td>Doe</td>
-                                                <td>jhon@email.com</td>
-                                                <td>USA</td>
-                                                <td>123</td>
-                                                <td>Member</td>
-                                                <td> <a href="{{url('/admin/employee/edit')}}"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
-                                                <td> <button class="btn btn-danger m-2">ลบ</button></td>
+                                                <td>{{ $ep->id }}</td>
+                                                <td>{{ $ep->name }}</td>
+                                                <td>{{ $ep->username }}</td>
+                                                <td>{{ $ep->email }}</td>
+                                                <td>{{ $ep->phone }}</td>
+                                                <td>{{ $ep->address }}</td>
+                                                <td> <a href="{{url('/admin/employee/edit/'. $ep->id)}}" class="btn btn-warning rounded-pill">แก้ไข</a> </td>                                                {{-- <td> <a href="{{url('/admin/hbproduct/delete/'. $hb->id)}}"  class="btn btn-danger rounded-pill">Delete</a> </td> --}}
+                                                <td> <a href="{{url('/admin/employee/delete/'. $ep->id)}}"  class="btn btn-danger rounded-pill">ลบ</a> </td>
                                             </tr>
                                           @endforeach
                                         

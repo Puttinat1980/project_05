@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\Models\Workings;
+
+use function PHPSTORM_META\Workings;
 
 class WorkingsController extends Controller
 {
@@ -24,6 +26,25 @@ class WorkingsController extends Controller
     public function index()
     {
         // return view('home');
-        return view('adminpage.workings.adminworkings');
+        $workings = workings::all();
+        return view('adminpage.workings.adminworkings',compact('workings'));
     }
+    public function formadd()
+    {
+        return view('adminpage.workings.add');
+    }
+
+public function insert(Request $request)
+{
+    $request->validate([
+        'name'=>"nullable",
+        'detail'=>'nullable',
+        'image'=>"nullable",
+
+
+    ]);
+    workings::create($request->all());
+
+    return redirect()->route('adminpage.workings.adminworkings');
+}
 }

@@ -11,9 +11,6 @@
                 <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars"></i>
                 </a>
-                <form class="d-none d-md-flex ms-4">
-                    <input class="form-control bg-dark border-0" type="search" placeholder="Search">
-                </form>
                 <div class="navbar-nav align-items-center ms-auto">
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
@@ -95,42 +92,32 @@
             <!-- Table Start -->
             <div class="container-fluid pt-4 px-4">
                     <div class="col-12">
-                        <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Calender</h6>
-                        <a href="{{url('/admin/calender/add')}}"  class="btn btn-info m-2">เพิ่มข้อมูล</a>
-                            
-
-
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">First Name</th>
-                                            <th scope="col">Last Name</th>
-                                            <th scope="col">Email</th>
-                                            <th scope="col">Country</th>
-                                            <th scope="col">ZIP</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">แก้ไข</th>
-                                            <th scope="col">ลบ</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td></td>
-                                                <td>Doe</td>
-                                                <td>jhon@email.com</td>
-                                                <td>USA</td>
-                                                <td>123</td>
-                                                <td>Member</td>
-                                                <td> <a href="{{url('/admin/employee/edit')}}"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
-                                                <td> <button class="btn btn-danger m-2">ลบ</button></td>
-                                            </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                    <div class="bg-secondary rounded h-100 p-4">
+                            <h6 class="mb-4">เพิ่มข้อมูล</h6>
+                            <form action="{{ route('adminpage.product.insert')}}" method="POST"enctype="multipart/form-data">
+                                @csrf
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">ชื่อ</label>
+                                    <input type="text" name = "name"class="form-control" >                                    
+                                </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">ราคา</label>
+                                    <input type="text" name = "price"class="form-control">                                    
+                                </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">ข้อมูล</label>
+                                    <input type="text" name = "detail"class="form-control">                                    
+                                </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">รูปภาพ</label>
+                                    <input class="form-control bg-dark" name="image" type="file">
+                                </div>
+                                <a href="{{url('admin/product')}}"  class="btn btn-light m-2">ย้อนกลับ</a>
+                                <button type="submit" class="btn btn-primary">เพิ่มข้อมูล</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -159,5 +146,6 @@
     <script src="js/main.js"></script>
 </body>
 
-</html> 
+</html>
+
 @stop

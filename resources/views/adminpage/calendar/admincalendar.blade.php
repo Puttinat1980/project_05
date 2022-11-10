@@ -86,7 +86,13 @@
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">My Profile</a>
                             <a href="#" class="dropdown-item">Settings</a>
-                            <a href="#" class="dropdown-item">Log Out</a>
+                            <a href="#" class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"
+                            >Log Out</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
                         </div>
                     </div>
                 </div>
@@ -96,29 +102,31 @@
             <div class="container-fluid pt-4 px-4">
                     <div class="col-12">
                         <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Type</h6>
-                            <a href="{{url('admin/type/add')}}"  class="btn btn-info m-2">เพิ่มข้อมูล</a>
+                            <h6 class="mb-4">Calendar</h6>
+                        <a href="{{url('/admin/calendar/add')}}"  class="btn btn-info m-2">เพิ่มข้อมูล</a>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
                                             <th scope="col">Name</th>
-                                            <th scope="col">price</th>
                                             <th scope="col">detail</th>
+                                            <th scope="col">image</th>
                                             <th scope="col">แก้ไข</th>
                                             <th scope="col">ลบ</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                            @foreach ($type as $row)
+                                        @foreach ($calendar as $cd)
                                             <tr>
-                                                <td>{{$row->id}}</td>
-                                                <td>{{$row->name}}</td>
-                                                <td>{{$row->price}}</td>
-                                                <td>{{$row->detail}}</td>
-                                                <td> <a href="{{url('/admin/employee/edit')}}"  class="btn btn-warning m-2">แก้ไขข้อมูล</a> </td>
-                                                <td> <button class="btn btn-danger m-2">ลบ</button></td>
+                                                <td>{{ $cd->id }}</td>
+                                                <td>{{ $cd->name }}</td>
+                                                <td>{{ $cd->detail }}</td>
+                                                <td class="text-bold-500">
+                                                    <img src="{{ asset('admin/upload/calendar/'. $cd->image) }}" width="100px" height="100px">
+                                                </td>
+                                                <td> <a href="{{url('/admin/calendar/edit/'. $cd->id)}}" class="btn btn-warning rounded-pill">แก้ไข</a> </td>                                                {{-- <td> <a href="{{url('/admin/hbproduct/delete/'. $hb->id)}}"  class="btn btn-danger rounded-pill">Delete</a> </td> --}}
+                                                <td> <a href="{{url('/admin/calendar/delete/'. $cd->id)}}"  class="btn btn-danger rounded-pill">ลบ</a> </td>
                                             </tr>
                                             @endforeach
                                     </tbody>
@@ -152,5 +160,5 @@
     <script src="js/main.js"></script>
 </body>
 
-</html>
+</html> 
 @stop

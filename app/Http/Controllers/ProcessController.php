@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\Models\Process;
+
+use function PHPSTORM_META\process;
 
 class ProcessController extends Controller
 {
@@ -24,6 +26,24 @@ class ProcessController extends Controller
     public function index()
     {
         // return view('home');
-        return view('adminpage.process.adminprocess');
+        $process = process::all();
+        return view('adminpage.process.adminprocess',compact('process'));
     }
+    public function formadd()
+    {
+        return view('adminpage.process.add');
+    }
+
+public function insert(Request $request)
+{
+    $request->validate([
+        'name'=>"nullable",
+        'detail'=>'nullable',
+        'image'=>'nullable',
+
+    ]);
+    process::create($request->all());
+
+    return redirect()->route('adminpage.process.adminprocess');
+}
 }

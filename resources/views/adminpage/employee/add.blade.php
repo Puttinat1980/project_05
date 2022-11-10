@@ -96,18 +96,33 @@
                     <div class="col-12">
                     <div class="bg-secondary rounded h-100 p-4">
                             <h6 class="mb-4">เพิ่มข้อมูล</h6>
-                            <form>
+                            <form action="{{ route('adminpage.employee.insert')}}" method="POST">                                
+                                @csrf
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">ชื่อ</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <input type="text" name="name" class="form-control">
                                     <div id="emailHelp" class="form-text">ใส่ชื่อ employee
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">ลิ้ง</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1">
-                                    <div id="emailHelp" class="form-text">ใส่ลิ่ง Google employee
-                                    </div>
+                                    <label for="exampleInputPassword1" class="form-label">นามสกุล</label>
+                                    <input type="text" name="username" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">เบอร์</label>
+                                    <input type="text" name="phone" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">ที่อยู่</label>
+                                    <input type="text" name="address" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Email</label>
+                                    <input type="text" name="email" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">รหัส</label>
+                                    <input type="text" name="password" class="form-control">
                                 </div>
                                 <a href="{{url('/admin/employee')}}"  class="btn btn-light m-2">ย้อนกลับ</a>
                                 <button type="submit" class="btn btn-primary">เพิ่มข้อมูล</button>

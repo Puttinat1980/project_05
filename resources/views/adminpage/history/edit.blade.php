@@ -97,20 +97,20 @@
                     <div class="col-12">
                     <div class="bg-secondary rounded h-100 p-4">
                             <h6 class="mb-4">เพิ่มข้อมูล</h6>
-                            <form>
+                            <form action="{{ url('/admin/history/update/'.$history->id) }}" method="POST" enctype="multipart/form-data">
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">ชื่อ</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    <div id="emailHelp" class="form-text">ใส่ชื่อ history
-                                    </div>
+                                    <label for="exampleInputPassword1" class="form-label">รูปภาพ</label>
+                                    <input type="file" class="form-control" name="image" value="{{ $history->image }}">
+                                    <img src="{{ asset('admin/upload/history/'. $history->image) }}" width="100px" height="100px">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">ลิ้ง</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1">
-                                    <div id="emailHelp" class="form-text">ใส่ลิ่ง Google .........................
+                                    <label for="exampleInputPassword1" class="form-label">รายละเอียดพนักงาน</label>
+                                    <input type="text" class="form-control" name="detail" value="{{ $history->detail }}">
                                     </div>
                                 </div>
-                                <a href="{{url('admin/history')}}"  class="btn btn-light m-2">ย้อนกลับ</a>
+                                </div>
+                                
+                                <a href="{{url('/admin/history')}}"  class="btn btn-light m-2">ย้อนกลับ</a>
                                 <button type="submit" class="btn btn-primary">เพิ่มข้อมูล</button>
                             </form>
                         </div>

@@ -97,19 +97,20 @@
                     <div class="col-12">
                     <div class="bg-secondary rounded h-100 p-4">
                             <h6 class="mb-4">เพิ่มข้อมูล</h6>
-                            <form>
+                            <form action="{{ route('adminpage.calendar.insert')}}" method="POST" enctype="multipart/form-data">
+                                @csrf
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">ชื่อ</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    <div id="emailHelp" class="form-text">ใส่ชื่อ calender
-                                    </div>
-                                </div>
+                                    <input type="text"  name="name" class="form-control" >
 
+                                    <label for="exampleInputEmail1" class="form-label">รายละเอียด</label>
+                                    <input type="text"  name="detail" class="form-control">                   
+                                </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">รูปภาพ</label>
-                                    <input class="form-control bg-dark" type="file" id="formFile">
+                                    <input class="form-control bg-dark" type="file" name="image" >
                                 </div>
-                                <a href="{{url('/admin/calender')}}"  class="btn btn-light m-2">ย้อนกลับ</a>
+                                <a href="{{url('/admin/calendar')}}"  class="btn btn-light m-2">ย้อนกลับ</a>
                                 <button type="submit" class="btn btn-primary">เพิ่มข้อมูล</button>
                             </form>
                         </div>
